@@ -17,8 +17,15 @@ importers:
       random-hex:
         specifier: ^1.0.2
         version: 1.0.2
+    devDependencies:
+      '@types/chroma-js':
+        specifier: ^2.4.4
+        version: 2.4.4
 
 packages:
+
+  '@types/chroma-js@2.4.4':
+    resolution: {integrity: sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==}
 
   chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
@@ -31,6 +38,8 @@ packages:
     resolution: {integrity: sha512-MZa4hZIAFdVV/mzB1YZjdwrjzsjuYzR7gY1R9GDCQqGJYbbyQHp9+uS3T3vmhYM+GagELvufkE1eD0T1nSS1uQ==}
 
 snapshots:
+
+  '@types/chroma-js@2.4.4': {}
 
   chalk@5.3.0: {}
 
