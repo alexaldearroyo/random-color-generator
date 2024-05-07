@@ -16,8 +16,14 @@
 
 ### TO-DOs
 
+---
+
 - [x] Print block of 31x9 # characters when running `node index.js`
 - [x] Make that in the rows 4, 5 and 6 of the block there are blank spaces instead of '#' between the columns 6 and 25
 - [x] Generate random hex color
 - [x] Make hex code appear in the center of row 5
 - [x] Make text color equal to the randomized hexcode
+
+---
+
+- [x] make the program accept an argument between (red, orange, yellow, blue, violet, green, cyan) or no argument; otherwise print "invalid argument"
