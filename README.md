@@ -6,6 +6,18 @@
 
 - The app also accepts for a hue and/or luminosity as command line arguments and then generate random colors that match those choices.
 
+### Usage
+
+`node index.js`
+
+Valid arguments for hue:
+
+- red, orange, yellow, bue, violet, green, cyan
+
+Valid arguments for luminosity:
+
+- dark, light
+
 **Usage examples:**
 
 `node index.js`: Returns a block of 31x9 # characters with a random color.
@@ -24,9 +36,11 @@
 
 ---
 
-- [x] make the program accept an argument between (red, orange, yellow, blue, violet, green, cyan) or no argument; otherwise print "invalid argument"
-- [] pair the hue arguments to a range of matching colors
+- [x] Make the program accept a argument (red, orange, yellow, blue, violet, green, cyan) or no argument; otherwise print "invalid argument"
+- [x] Pair the hue arguments to a range of matching colors
+- [x] Make the program accept a second argument (dark, light)
+- [x] Make the program output luminosity equivalent to said argument
 
-## Wihslist
+## Wishlist
 
 - [] Add hue argument options for white, gray and black.mmm

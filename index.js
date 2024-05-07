@@ -3,9 +3,18 @@ import chroma from 'chroma-js';
 import randomHex from 'random-hex';
 
 // Generate a random color in a specific hue range avoiding black/gray
-const generateRandomHueColor = (hue) => {
-  const randomSaturation = 0.4 + Math.random() * 0.6; // Avoid very low saturation (gray)
-  const randomLightness = 0.3 + Math.random() * 0.4; // Avoid very dark or very light colors
+const generateRandomHueColor = (hue, luminosity) => {
+  const randomSaturation = 0.5 + Math.random() * 0.5; // Avoid very low saturation (gray)
+
+  let randomLightness;
+  if (luminosity === 'dark') {
+    randomLightness = 0.15 + Math.random() * 0.2; // Dark range (not black)
+  } else if (luminosity === 'light') {
+    randomLightness = 0.8 + Math.random() * 0.15; // Light range (very light)
+  } else {
+    randomLightness = 0.3 + Math.random() * 0.4; // Default mid-range
+  }
+
   return chroma.hsl(hue, randomSaturation, randomLightness).hex();
 };
 
@@ -21,19 +30,20 @@ const hues = {
 };
 
 // Function to get a random color matching the hue argument
-const getHueColor = (arg) => {
-  if (arg in hues) {
-    return generateRandomHueColor(hues[arg]);
-  } else if (!arg) {
+const getHueColor = (hueArg, luminosity) => {
+  if (hueArg in hues) {
+    return generateRandomHueColor(hues[hueArg], luminosity);
+  } else if (!hueArg) {
     return randomHex.generate(); // Fall back to any random color
   } else {
-    console.log('Invalid argument');
+    console.log('Invalid hue argument');
     process.exit(1);
   }
 };
 
 const userHue = process.argv[2];
-const randomHueColor = getHueColor(userHue);
+const userLuminosity = process.argv[3]; // Accepts 'dark' or 'light'
+const randomHueColor = getHueColor(userHue, userLuminosity);
 
 const width = 31;
 const height = 9;
