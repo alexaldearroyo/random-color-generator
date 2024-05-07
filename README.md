@@ -16,8 +16,6 @@
 
 ### TO-DOs
 
----
-
 - [x] Print block of 31x9 # characters when running `node index.js`
 - [x] Make that in the rows 4, 5 and 6 of the block there are blank spaces instead of '#' between the columns 6 and 25
 - [x] Generate random hex color
@@ -27,3 +25,8 @@
 ---
 
 - [x] make the program accept an argument between (red, orange, yellow, blue, violet, green, cyan) or no argument; otherwise print "invalid argument"
+- [] pair the hue arguments to a range of matching colors
+
+## Wihslist
+
+- [] Add hue argument options for white, gray and black.mmm

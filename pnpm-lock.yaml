@@ -11,6 +11,9 @@ importers:
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
+      chroma-js:
+        specifier: ^2.4.2
+        version: 2.4.2
       random-hex:
         specifier: ^1.0.2
         version: 1.0.2
@@ -21,11 +24,16 @@ packages:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
+  chroma-js@2.4.2:
+    resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
+
   random-hex@1.0.2:
     resolution: {integrity: sha512-MZa4hZIAFdVV/mzB1YZjdwrjzsjuYzR7gY1R9GDCQqGJYbbyQHp9+uS3T3vmhYM+GagELvufkE1eD0T1nSS1uQ==}
 
 snapshots:
 
   chalk@5.3.0: {}
+
+  chroma-js@2.4.2: {}
 
   random-hex@1.0.2: {}
