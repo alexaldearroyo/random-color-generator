@@ -15,3 +15,8 @@
 ---
 
 ### TO-DOs
+
+- [x] Print block of 31x9 # characters when running `node index.js`
+- [x] Make that in the rows 4, 5 and 6 of the block there are blank spaces instead of '#' between the columns 6 and 25
+- [x] Generate random hex color
+- [ ] Randomize the color of the '#' characters each time that the program is run
