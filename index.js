@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import randomHex from 'random-hex';
 
 const width = 31;
@@ -5,6 +6,9 @@ const height = 9;
 const startBlankColumn = 6;
 const endBlankColumn = 25;
 const randomColor = randomHex.generate();
+
+// Create a styled hash character with the random color
+const styledHash = chalk.hex(randomColor)('#');
 
 for (let i = 0; i < height; i++) {
   if (i >= 3 && i <= 5) {
@@ -14,22 +18,22 @@ for (let i = 0; i < height; i++) {
         (endBlankColumn - startBlankColumn - randomColor.length) / 2,
       );
       console.log(
-        '#'.repeat(startBlankColumn - 1) +
+        styledHash.repeat(startBlankColumn - 1) +
           ' '.repeat(padding) +
-          randomColor +
+          chalk.hex(randomColor)(randomColor) +
           ' '.repeat(padding + (randomColor.length % 2 === 0 ? 0 : 1)) +
-          '#'.repeat(width - endBlankColumn),
+          styledHash.repeat(width - endBlankColumn),
       );
     } else {
       // Print empty rows with spaces
       console.log(
-        '#'.repeat(startBlankColumn - 1) +
+        styledHash.repeat(startBlankColumn - 1) +
           ' '.repeat(endBlankColumn - startBlankColumn + 1) +
-          '#'.repeat(width - endBlankColumn),
+          styledHash.repeat(width - endBlankColumn),
       );
     }
   } else {
     // Print full-width rows
-    console.log('#'.repeat(width));
+    console.log(styledHash.repeat(width));
   }
 }

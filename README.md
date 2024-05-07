@@ -20,4 +20,4 @@
 - [x] Make that in the rows 4, 5 and 6 of the block there are blank spaces instead of '#' between the columns 6 and 25
 - [x] Generate random hex color
 - [x] Make hex code appear in the center of row 5
-- [ ] Randomize the color of the '#' characters each time that the program is run
+- [x] Make text color equal to the randomized hexcode
